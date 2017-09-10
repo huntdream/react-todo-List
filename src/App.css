@@ -1,0 +1,102 @@
+body {
+    background-color: #9fa8a3;
+    max-height: 100vh;
+    font-size: 16px;
+    font-family: "华文楷体",sans-serif;
+}
+
+.container {
+    width: 60%;
+    margin: 20px auto;
+    padding: 40px 0;
+    text-align: center;
+    background-color: #4bc775;
+
+}
+
+.todo-list {
+    height: 45px;
+    line-height: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.todo-list input {
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    padding: 0 15px;
+    opacity: .6;
+}
+
+button {
+    padding: 5px 20px;
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    margin: 0 20px;
+    background-color: #6650b0;
+    color: #fff;
+    height:30px;
+}
+
+button:hover {
+    background-color: #8f6ff8;
+}
+
+.list {
+    list-style: none;
+    margin:20px 40px;
+    padding:0;
+}
+
+.list li {
+    background-color: #b4d57d;
+    margin:20px;
+    overflow: hidden;
+    padding: 30px 20px 40px 45px;
+    position: relative;
+    font-family: "华文楷体",sans-serif;
+}
+
+.task-id {
+    position: absolute;
+    top:10px;
+    left:0;
+    height:25px;
+    background-color: #8587d7;
+    color: #ffffff;
+    width:40px;
+}
+
+.task-date {
+    position: absolute;
+    bottom:0;
+    right: 10px;
+    height:25px;
+    color: #897676;
+    width:auto;
+}
+
+textarea {
+    width:300px;
+    height: 45px;
+    overflow: hidden;
+    resize: none;
+    border: 0;
+    border-radius: 2px;
+    outline: none;
+    padding: 0 15px;
+}
+
+.task-content {
+    white-space: pre-line;
+    padding:0;
+    margin:0;
+    font-size: 18px;
+}
