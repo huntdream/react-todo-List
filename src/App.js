@@ -30,6 +30,7 @@ class TodoList extends Component {
     }
 
     submitWithKey(e) {
+        e.preventDefault();
         if (e.shiftKey && e.keyCode === 13) {
             this.addItem();
             console.log("Pressed");
@@ -48,7 +49,7 @@ class TodoList extends Component {
         console.log(dateTime);
         tasks.push({
             id: tasks.length,
-            text: this._inputElement.value,
+            text: this._inputElement.value.trim(),
             date: dateTime
         });
 
