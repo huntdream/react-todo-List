@@ -41,11 +41,14 @@ class TodoList extends Component {
         if(e){
             e.preventDefault();
         }
-        let tasks = this.state.items;
-        let today = new Date();
-        let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        let dateTime = date + ' ' + time;
+        if(this._inputElement.value===''){
+            return false;
+        }
+        const tasks = this.state.items;
+        const today = new Date();
+        const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        const dateTime = date + ' ' + time;
         console.log(dateTime);
         tasks.push({
             id: tasks.length,
@@ -67,7 +70,7 @@ class TodoList extends Component {
         return (
             <div>
                 <form className={"todo-list"} onSubmit={this.addItem}>
-                    <textarea ref={(a) => this._inputElement = a} type="text" placeholder={"Enter task"}
+                    <textarea ref={(a) => this._inputElement = a} type="text" placeholder={"Enter task, shift+enter to send "}
                               onKeyUp={this.submitWithKey}/>
                     <button type="submit">Add</button>
                 </form>
