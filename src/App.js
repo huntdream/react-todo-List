@@ -3,8 +3,8 @@ import './App.css';
 
 class TodoItems extends Component {
     render() {
-        let todoEntries = this.props.entries;
-        let listItems = todoEntries.sort((a, b) => b.id - a.id).map((item) =>
+        const todoEntries = this.props.entries;
+        const listItems = todoEntries.sort((a, b) => b.id - a.id).map((item) =>
             <li key={item.id}>
                 <div className={"task-id"}>{item.id}</div>
                 <p className={'task-content'}>{item.text}</p>
